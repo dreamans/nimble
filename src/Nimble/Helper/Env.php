@@ -13,7 +13,7 @@ namespace Nimble\Helper;
 
 class Env 
 {
-    const NIMBLE_VERSION = '0.9.9';
+    const NIMBLE_VERSION = '0.9.0';
 
     /**
      * @return string
