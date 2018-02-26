@@ -42,11 +42,19 @@ class Application
     private $configure;
 
     /**
-     * @param  Container $bootConfig
+     * @param  Bootstrap $boot
      */
     public function __construct(Bootstrap $boot)
     {
         $this->boot = $boot;
+    }
+
+    /**
+     * @return Bootstrap
+     */
+    public function bootstrap()
+    {
+        return $this->boot;
     }
 
     /**
@@ -118,4 +126,3 @@ class Application
         return $router->parseWebRouter($this);
     }
 }
-

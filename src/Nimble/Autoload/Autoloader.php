@@ -43,8 +43,8 @@ class Autoloader
 
     private static function checkPhpVersion()
     {
-        if (PHP_VERSION_ID < 50400) {
-            trigger_error('Nimble require PHP version >= 5.4.0', E_USER_ERROR);
+        if (PHP_VERSION_ID < 50600) {
+            trigger_error('Nimble require PHP version >= 5.6.0', E_USER_ERROR);
         }
     }
 }

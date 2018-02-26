@@ -106,4 +106,3 @@ class Router
         return $url;
     }
 }
-

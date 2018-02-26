@@ -61,4 +61,3 @@ class ClassLoader
         return false;
     }
 }
-

@@ -61,6 +61,8 @@ class Bootstrap
     {
         $this->initBootConfig($config);
 
+        $this->checkEnv();
+
         $this->bootstrap();
     }
 
@@ -80,6 +82,16 @@ class Bootstrap
     public function configureObject()
     {
         return $this->configure;
+    }
+
+    public function nimbleVersion()
+    {
+        return Env::nimbleVersion();
+    }
+
+    public function phpVersion($isInt = false)
+    {
+        return Env::phpVersion($isInt);
     }
 
     /**
@@ -109,6 +121,11 @@ class Bootstrap
         $this->bootConfig = $bootConfig;
     }
 
+    private function checkEnv()
+    {
+        Env::checkPhpVersion();
+    }
+
     private function bootstrap()
     {
         $this->regException();
@@ -125,4 +142,3 @@ class Bootstrap
         new Error($this->bootConfig->userExceptionHandle);
     }
 }
-
